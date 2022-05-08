@@ -14,5 +14,6 @@ pod 'Firebase/Storage'
 pod 'InstantSearchClient'
 pod 'Gallery'
 pod 'NVActivityIndicatorView/AppExtension'
+pod 'JGProgressHUD'
 
 end

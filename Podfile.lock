@@ -779,6 +779,7 @@ PODS:
   - gRPC-Core/Interface (1.44.0)
   - GTMSessionFetcher/Core (1.7.2)
   - InstantSearchClient (7.0.5)
+  - JGProgressHUD (2.2)
   - leveldb-library (1.22.1)
   - Libuv-gRPC (0.0.10):
     - Libuv-gRPC/Implementation (= 0.0.10)
@@ -801,6 +802,7 @@ DEPENDENCIES:
   - Firebase/Storage
   - Gallery
   - InstantSearchClient
+  - JGProgressHUD
   - NVActivityIndicatorView/AppExtension
 
 SPEC REPOS:
@@ -828,6 +830,7 @@ SPEC REPOS:
     - gRPC-Core
     - GTMSessionFetcher
     - InstantSearchClient
+    - JGProgressHUD
     - leveldb-library
     - Libuv-gRPC
     - nanopb
@@ -858,12 +861,13 @@ SPEC CHECKSUMS:
   gRPC-Core: 943e491cb0d45598b0b0eb9e910c88080369290b
   GTMSessionFetcher: 5595ec75acf5be50814f81e9189490412bad82ba
   InstantSearchClient: cd4b41f46bed82c1b12c759c76b733f7ed6dd8c2
+  JGProgressHUD: d83d7a981b85d11205e19ff8ad5bb9c40571c847
   leveldb-library: 50c7b45cbd7bf543c81a468fe557a16ae3db8729
   Libuv-gRPC: 55e51798e14ef436ad9bc45d12d43b77b49df378
   nanopb: a0ba3315591a9ae0a16a309ee504766e90db0c96
   NVActivityIndicatorView: d24b7ebcf80af5dcd994adb650e2b6c93379270f
   PromisesObjC: 99b6f43f9e1044bd87a95a60beff28c2c44ddb72
 
-PODFILE CHECKSUM: cfd6d7cc562fe32ce1b3c91e844fe87560454610
+PODFILE CHECKSUM: 6b727fc062deb405939116a8e4ccd9f8e3fb7501
 
 COCOAPODS: 1.11.3
