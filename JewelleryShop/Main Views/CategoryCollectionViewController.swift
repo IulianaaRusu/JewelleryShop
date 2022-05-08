@@ -52,6 +52,20 @@ class CategoryCollectionViewController: UICollectionViewController {
         return cell
     }
 
+	//MARK: UICollectionView Delegate
+	override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+		performSegue(withIdentifier: "categoryToItemsSeg", sender: categoryArray[indexPath.row])
+		 	}
+	
+	//MARK: Navigation
+	override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+		if segue.identifier == "categoryToItemsSeg" {
+			let vc = segue.destination as! ItemsTableViewController
+			vc.category = (sender as! Category)
+			print(vc)
+		}
+	}
+	
     //MARK: Download categories
     private func loadCategories(){
         
@@ -67,18 +81,6 @@ class CategoryCollectionViewController: UICollectionViewController {
 
 extension CategoryCollectionViewController: UICollectionViewDelegateFlowLayout{
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        let paddingSpace = sectionInsets.left * (itemsPerRow + 1)
-        let paddingSpaceR = sectionInsets.top * (itemsTotal + 1)
-        let availableWidth = view.frame.width - paddingSpace
-        let availableHeight = view.frame.height - paddingSpaceR
-		
-		print("paddR=", paddingSpaceR)
-		print("avvH=", availableHeight)
-		print("aavW=", availableWidth)
-		print("hperItem=", availableHeight/paddingSpaceR)
-        let widthPerItem = availableWidth / itemsPerRow
-//let heightPerItem = availableHeight / itemsTotal
-        
 		return CGSize(width: view.frame.width, height: (view.frame.height+20)/6)
     }
     
